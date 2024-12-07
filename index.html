@@ -207,7 +207,46 @@
 .contact-number:hover {
     text-decoration: underline;
 }
+/* Footer Link Styling */
+.footer-link {
+    font-size: 16px;
+    margin-top: 10px;
+}
 
+.footer-link-text {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-link-text:hover {
+    text-decoration: underline;
+    color: #4CAF50; /* Change color on hover for better UX */
+}
+.footer-btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.footer-btn:hover {
+    background-color: #45a049; /* Darker green */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Button active effect (when clicked) */
+.footer-btn:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: translateY(0); /* Reset position after click */
+}
 /* Responsive design */
 @media (max-width: 768px) {
     .footer-content {
@@ -269,6 +308,7 @@
     <div class="footer-right">
       <p class="footer-delivery">We do online delivery too!</p>
       <p class="footer-contact">Please contact: <a href="tel:+917010100677" class="contact-number">+917010100677</a></p>
+        <p class="footer-link"><a href="MeasuringYourRingSize.pdf"  class="footer-btn" download>Download Our Ring size chart</a></p>
     </div>
   </div>
   <div class="footer-bottom">
