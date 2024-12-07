@@ -135,6 +135,80 @@
                 font-size: 12px;
             }
         }
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer container styling */
+.footer {
+    background-color: #2d2d2d; /* Dark background for footer */
+    color: #fff; /* White text for contrast */
+    font-family: 'Arial', sans-serif;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Footer content layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    padding: 10px;
+    max-width: 45%; /* Restrict width for larger screens */
+}
+
+.footer-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700; /* Gold color for title */
+}
+
+.footer-address,
+.footer-delivery,
+.footer-contact {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Contact number link */
+.contact-number {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.contact-number:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
 
     </style>
 </head>
@@ -163,7 +237,7 @@
         </div>
 
         <div class="form-group">
-            <label for="hmc">Hallmark Charge/Making charge (₹):</label>
+            <label for="hmc">Hallmark Charge (₹):</label>
             <input type="number" id="hmc" style="background-color:{{myCol}}" ng-model="hmc" placeholder="Enter hallmark charge">
         </div>
 
@@ -172,9 +246,21 @@
             <p>Total After Tax: <span ng-bind="((bTax*3)/100)+bTax | number:0"></span> ₹</p>
         </div>
 
-        <div class="footer">
-            <p>&copy; 2024 Price Calculator | All rights reserved</p>
-        </div>
+    <div class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p class="footer-title">Sabarinathan Jewellers</p>
+      <p class="footer-address">166, Nethaji Road, Madurai-1</p>
+    </div>
+    <div class="footer-right">
+      <p class="footer-delivery">We do online delivery too!</p>
+      <p class="footer-contact">Please contact: <a href="tel:+917010100677" class="contact-number">7010100677</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Sabarinathan Jewellers. All Rights Reserved.</p>
+  </div>
+</div>
     </div>
 
     <script>
