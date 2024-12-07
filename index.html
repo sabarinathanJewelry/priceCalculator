@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Calculation</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   <script src="HeaderRates.js" type="text/javascript"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -138,9 +139,9 @@
     </style>
 </head>
 
-<body ng-app="" ng-init="myCol='lightblue'">
+<body ng-app="myApp" ng-init="myCol='lightblue'">
 
-    <div class="container">
+    <div class="container" ng-controller="MainController" ng-init="fetchData()">
         <!-- Image with Responsiveness -->
         <img src="logo.png" alt="Logo"/>
 
@@ -167,8 +168,8 @@
         </div>
 
         <div class="result">
-            <p>Total Before Tax: <span ng-bind="bTax=(((((rate*wastage)/100)+rate))*weight)+hmc"></span> ₹</p>
-            <p>Total After Tax: <span ng-bind="((bTax*3)/100)+bTax"></span> ₹</p>
+            <p  ng-hide="true">Total Before Tax: <span ng-bind="bTax=(((((rate*wastage)/100)+rate))*weight)+hmc"></span> ₹</p>
+            <p>Total After Tax: <span ng-bind="((bTax*3)/100)+bTax | number:0"></span> ₹</p>
         </div>
 
         <div class="footer">
@@ -176,6 +177,58 @@
         </div>
     </div>
 
+    <script>
+        // AngularJS Controller Initialization
+        var app = angular.module('myApp', []);
+	var maxRows_HeadRates = 0;
+	var oldData_HeadRates;
+	var counterRefresh_HeadRates = 0;
+	var today_date;
+        app.controller('MainController', function ($scope, $http) {
+
+            // Function to fetch data from an API using $http
+            $scope.fetchData = function () {
+                // Here, replace the URL with your actual API endpoint
+                var apiUrl = "http://bcast.slnbullion.com/VOTSBroadcastStreaming/Services/xml/GetLiveRateByTemplateID/slnmjdma";
+
+                // Use $http to make an AJAX GET request
+                $http.get(apiUrl)
+                    .then(function (response) {
+                        // Success callback
+                        // Assuming response.data contains the rate value
+      			 var messagesDesktopp_HeadRates = "";
+       			 messagesDesktopp_HeadRates = response.data.split("\n");
+       			 //alert(messagesDesktopp_HeadRates.length);
+       			 if (typeof oldData_HeadRates != 'undefined') {
+
+       			 }
+       			 else {
+       			     //alert("1");
+      			      oldData_HeadRates = response.data.toString();
+      			  }
+      			  var messagesOldDesktop_HeadRates = oldData_HeadRates.split("\n");
+
+        	           if (typeof messagesDesktopp_HeadRates != 'undefined') {
+         		   if (maxRows_HeadRates == 0) {
+              		   maxRows_HeadRates = messagesDesktopp_HeadRates.length;
+           		 }           
+           		 var trow_HeadRates = "";
+           		 var trow_HeadRates2 = "";
+           		 //GOLD
+            		var retDesktop_HeadRates = "";
+            		retDesktop_HeadRates = messagesDesktopp_HeadRates[0].split("\t");
+           		var oldRetDesktop_HeadRates = "";
+            		var trowString_HeadRates = "";
+            		oldRetDesktop_HeadRates = messagesOldDesktop_HeadRates[0].split("\t");
+                        $scope.rate =  Number(retDesktop_HeadRates[4]);  // Bind the response to the model
+			}
+                    	}, function (error) {
+                        // Error callback
+                        console.error("Error fetching data:", error);
+                    });
+            };
+        });
+    </script>
 </body>
 
 </html>
