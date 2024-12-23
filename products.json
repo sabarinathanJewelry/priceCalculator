@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Gold ZZ",
+        "description": "Gold zig zag.",
+        "price": 5960,
+        "reducedPrice": 5560,
+        "image": "images/79.jpg"
+    },
+    {
+        "name": "Rose Diamond",
+        "description": "Rose gold pattern with diamond.",
+        "price": 5700,
+        "reducedPrice": 5300,
+        "image": "images/80.jpg"
+    },
+    {
+        "name": "Gold Chess",
+        "description": "Gold Chess pattern",
+        "price": 6240,
+        "reducedPrice": 5840,
+        "image": "images/81.jpg"
+    },
+    {
+        "name": "Golden line",
+        "description": "Gold Line with glitering lines",
+        "price": 5560,
+        "reducedPrice": 5160,
+        "image": "images/73.jpg"
+    }
+]
