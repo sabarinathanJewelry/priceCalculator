@@ -12,12 +12,5 @@
         "price": 5700,
         "reducedPrice": 5300,
         "image": "images/80.jpg"
-    },
-    {
-        "name": "Golden line",
-        "description": "Gold Line with glitering lines",
-        "price": 5560,
-        "reducedPrice": 5160,
-        "image": "images/73.jpg"
     }
 ]
