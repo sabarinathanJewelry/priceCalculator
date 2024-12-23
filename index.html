@@ -328,9 +328,9 @@
                     <h2>{{jimi.name}}</h2>
                     <p class="description">{{jimi.description}}</p>
                     <p class="gprice">Gold price : ₹{{jimi.weight*rate }}</p>
-                    <p class="wastage">wastage : ₹{{(jimi.wastage*rate*jimi.weight)/100}}</p>
-                    <p class="mc">Mc/HC : ₹{{jimi.mc}}</p>
-                    <p class="bTax">Before Tax: {{bpTax=(((((rate*jimi.wastage)/100)+rate))*jimi.weight)+jimi.mc}}</p>
+                    <p class="wastage">wastage ({{jimi.wastage}}): ₹{{(jimi.wastage*rate*jimi.weight)/100 | number:0}}</p>
+                    <p class="mc">MC/HC : ₹{{jimi.mc}}</p>
+                    <p class="bTax">Before Tax: {{bpTax=(((((rate*jimi.wastage)/100)+rate))*jimi.weight)+jimi.mc | number:0}}</p>
                     <p class="aTax">Final Price: {{((bpTax*3)/100)+bpTax | number:0}}</p>
                 </div>
             </div>
