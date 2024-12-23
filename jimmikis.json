@@ -6,5 +6,13 @@
         "wastage": 16,
         "mc" : 200,
         "image": "jimiki/CS0721.jpg"
+    },
+    {
+        "name": "CSA0263",
+        "description": "Jimikki with 13 color stones, undetachable cute jimmiki",
+        "weight":4.230,
+        "wastage": 18,
+        "mc" : 200,
+        "image": "jimiki/CSA0263.jpg"
     }
 ]
