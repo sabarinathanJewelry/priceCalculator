@@ -7,7 +7,6 @@
     <title>Price Calculation</title>
     <link rel="icon" href="tigerlogo.ico?v=2" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-   
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -261,7 +260,107 @@
         text-align: center;
     }
 }
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
 
+/* Individual Product Styling */
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%; /* Full width on small screens */
+    max-width: 250px; /* Limit to max width for medium screens */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product Title */
+.product h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0;
+}
+
+/* Product Description */
+.product .description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Price Styling */
+.price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.reduced-price {
+    font-size: 1.3em;
+    color: green;
+    font-weight: bold;
+}
+
+/* Hover effect on product */
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile devices (width <= 600px) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .product {
+        width: 100%; /* Full width for mobile */
+        max-width: 100%;
+    }
+
+    .product-list {
+        flex-direction: column; /* Stack products vertically */
+        align-items: center;
+    }
+}
+
+/* Tablets (width between 601px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .product {
+        width: 48%; /* Two products per row */
+        max-width: 48%;
+    }
+
+    .product-list {
+        justify-content: center; /* Center the products */
+    }
+}
+
+/* Desktops (width >= 1025px) */
+@media (min-width: 1025px) {
+    .product {
+        width: 30%; /* Three products per row */
+        max-width: 30%;
+    }
+}
 
     </style>
 </head>
@@ -271,6 +370,17 @@
     <div class="container" ng-controller="MainController" ng-init="fetchData()">
         <!-- Image with Responsiveness -->
         <img src="logo.png" alt="Logo"/>
+
+        <div class="product-list">
+            <div class="product" ng-repeat="product in products">
+                <img ng-src="{{product.image}}" alt="{{product.name}}">
+                <h2>{{product.name}}</h2>
+                <p class="description">{{product.description}}</p>
+                <p class="price">Price: <span class="original-price">₹{{product.price}}</span></p>
+                <p class="reduced-price">Reduced Price: ₹{{product.reducedPrice}}</p>
+            </div>
+        </div>
+    
 
         <h2>Gold Ornaments Calculator</h2>
 
@@ -368,6 +478,9 @@
                         console.error("Error fetching data:", error);
                     });
             };
+          $http.get('products.json').then(function(response) {
+           $scope.products = response.data;
+          });
         });
     </script>
 </body>
