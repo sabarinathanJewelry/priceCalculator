@@ -330,8 +330,8 @@
                     <p class="gprice">Gold price : ₹{{jimmiki.weight*rate }}</p>
                     <p class="wastage">wastage : ₹{{(jimmiki.wastage*rate*jimmiki.weight)/100}}</p>
                     <p class="mc">Mc/HC : ₹{{jimmiki.mc}}</p>
-                    <p class="bTax">Before Tax: bTax={{(((((rate*jimmiki.wastage)/100)+rate))*jimmiki.weight)+jimmiki.mc}}</p>
-                    <p class="aTax">Final Price: {{((bTax*3)/100)+bTax | number:0}}</p>
+                    <p class="bTax">Before Tax: bpTax={{(((((rate*jimmiki.wastage)/100)+rate))*jimmiki.weight)+jimmiki.mc}}</p>
+                    <p class="aTax">Final Price: {{((bpTax*3)/100)+bpTax | number:0}}</p>
                 </div>
             </div>
         </div>
