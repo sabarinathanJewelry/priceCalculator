@@ -22,5 +22,13 @@
         "wastage": 18,
         "mc" : 200,
         "image": "jimiki/CSA0339.jpg"
-    }
+    },
+    {
+        "name": "CAS0346",
+        "description": "Jimikki with 14 color stones, undetachable cute jimmiki",
+        "weight":4.330,
+        "wastage": 18,
+        "mc" : 200,
+        "image": "jimiki/CAS0346.jpg"
+    },
 ]
