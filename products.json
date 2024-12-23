@@ -1,12 +1,5 @@
 [
     {
-        "name": "Gold ZZ",
-        "description": "Gold zig zag.",
-        "price": 5960,
-        "reducedPrice": 5560,
-        "image": "images/79.jpg"
-    },
-    {
         "name": "Rose Diamond",
         "description": "Rose gold pattern with diamond.",
         "price": 5700,
