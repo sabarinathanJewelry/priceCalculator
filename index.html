@@ -327,7 +327,7 @@
                     <img ng-src="{{jimi.image}}" alt="{{jimi.name}}" class="zoomable-image">
                     <h2>{{jimi.name}}</h2>
                     <p class="description">{{jimi.description}}</p>
-                    <p class="gprice">Gold price : ₹{{jimi.weight*rate }}</p>
+                    <p class="gprice">Gold price : ₹{{jimi.weight*rate | number:0}}</p>
                     <p class="wastage">wastage ({{jimi.wastage}}%): ₹{{(jimi.wastage*rate*jimi.weight)/100 | number:0}}</p>
                     <p class="mc">MC/HC : ₹{{jimi.mc}}</p>
                     <p class="bTax">Before Tax: {{bpTax=(((((rate*jimi.wastage)/100)+rate))*jimi.weight)+jimi.mc | number:0}}</p>
