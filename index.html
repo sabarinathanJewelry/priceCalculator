@@ -300,6 +300,7 @@
     <!-- Top Navigation Menu -->
     <div class="navbar">
         <a href="#rectangularKada">Rectangular Kada</a>
+        <a href="#castingJimikki">Cute Jimmikies</a>
         <a href="#priceCalculator">Price Calculator</a>
     </div>
 
@@ -315,6 +316,22 @@
                     <p class="description">{{product.description}}</p>
                     <p class="price"><span class="original-price">₹{{product.price}}</span></p>
                     <p class="reduced-price">Reduced Price: ₹{{product.reducedPrice}}</p>
+                </div>
+            </div>
+        </div>
+         <!-- Jimiki Section -->
+         <div id="castingJimikki" class="casting-jimmiki">
+            <h2>Available Rectangular Kada</h2>
+            <div class="product-list">
+                <div class="jimmiki" ng-repeat="jimi in jimmikes">
+                    <img ng-src="{{jimmiki.image}}" alt="{{jimmiki.name}}" class="zoomable-image">
+                    <h2>{{jimmiki.name}}</h2>
+                    <p class="description">{{jimmiki.description}}</p>
+                    <p class="gprice">Gold price : ₹{{jimmiki.weight*rate }}</p>
+                    <p class="wastage">wastage : ₹{{(jimmiki.wastage*rate*jimmiki.weight)/100}}</p>
+                    <p class="mc">Mc/HC : ₹{{jimmiki.mc}}</p>
+                    <p class="bTax">Before Tax: bTax={{(((((rate*jimmiki.wastage)/100)+rate))*jimmiki.weight)+jimmiki.mc}}</p>
+                    <p class="aTax">Final Price: {{((bTax*3)/100)+bTax | number:0}}</p>
                 </div>
             </div>
         </div>
@@ -344,8 +361,8 @@
             </div>
 
             <div class="result">
-                <p>Total Before Tax: ₹{{(((((rate * wastage) / 100) + rate) * weight) + hmc) | number:0}}</p>
-                <p>Total After Tax: ₹{{((( ((rate * wastage) / 100) + rate) * weight) + hmc) * 1.03 | number:0}}</p>
+                <p  ng-hide="true">Total Before Tax: <span ng-bind="bTax=(((((rate*wastage)/100)+rate))*weight)+hmc"></span> ₹</p>
+                <p>Total After Tax: <span ng-bind="((bTax*3)/100)+bTax | number:0"></span> ₹</p>
             </div>
         </div>
         <div class="footer">
@@ -385,6 +402,15 @@
                 $http.get('products.json').then(function (response) {
                     $scope.products = response.data;
                 });
+                
+                // Fetch jimiki data
+                $http.get('jimmikis.json').then(function (response) {
+                    $scope.jimmikies = response.data;
+                });
+            //     $scope.jimmikis = [
+            //     { name: 'Gold Necklace', weight: 10,wastage: 5 ,mc : 200,image: "jimiki/CS0721.jpg"}
+               
+            // ];
             };
 
             // Function to handle zoom for touch devices
