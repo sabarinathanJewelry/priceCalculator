@@ -598,10 +598,12 @@
                 $http.get('jimmikis.json').then(function (response) {
                     $scope.jimmikies = response.data;
                 });
-            //     $scope.jimmikis = [
-            //     { name: 'Gold Necklace', weight: 10,wastage: 5 ,mc : 200,image: "jimiki/CS0721.jpg"}
-               
-            // ];
+                $scope.isMenuOpen = false;
+
+                // Function to toggle the menu visibility
+                $scope.toggleMenu = function() {
+                    $scope.isMenuOpen = !$scope.isMenuOpen;
+                };
             };
 
             // Function to handle zoom for touch devices
