@@ -441,7 +441,7 @@
             <div class="product-list">
                 <div class="jimmiki" ng-repeat="jimi in jimmikies">
                     <img ng-src="{{jimi.image}}" alt="{{jimi.name}}" class="zoomable-image">
-                    <h2>{{jimi.name}} - {{jimi.weight}}</h2>
+                    <h2>{{jimi.name}} - {{jimi.weight}} gram</h2>
                     <p class="description">{{jimi.description}}</p>
                     <p class="gprice">Gold price : ₹{{jimi.weight*rate | number:0}}</p>
                     <p class="wastage">Wastage ({{jimi.wastage}}%): ₹{{(jimi.wastage*rate*jimi.weight)/100 | number:0}}</p>
