@@ -105,6 +105,10 @@
             transform: scale(1.2); /* Zoom in the image */
             cursor: pointer; /* Change cursor to indicate zoom */
         }
+        .jimmiki img:hover {
+            transform: scale(1.2); /* Zoom in the image */
+            cursor: pointer; /* Change cursor to indicate zoom */
+        }
 /* Price Styling */
 .price {
     font-size: 1.2em;
@@ -291,6 +295,118 @@
     .footer-right {
         max-width: 100%;
         text-align: center;
+    }
+}
+/* General container styles */
+#castingJimikki {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.casting-jimmiki h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styling for the product list */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Individual product card */
+.jimmiki {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jimmiki:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image zoom effect */
+.zoomable-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.zoomable-image:hover {
+    transform: scale(1.1);
+}
+
+/* Jimmiki name and weight */
+.jimmiki h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Description text */
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Price and other details */
+.gprice, .wastage, .mc, .bTax, .aTax {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.gprice {
+    color: #FF6347; /* Tomato color for Gold price */
+    font-weight: bold;
+}
+
+.wastage {
+    color: #FF8C00; /* Orange for wastage */
+}
+
+.mc {
+    color: #4682B4; /* Steel blue for MC/HC */
+}
+
+.bTax, .aTax {
+    color: #32CD32; /* Lime green for tax details */
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .product-list {
+        justify-content: center;
+    }
+
+    .jimmiki {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .jimmiki {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .zoomable-image {
+        width: 100%;
     }
 }
     </style>
