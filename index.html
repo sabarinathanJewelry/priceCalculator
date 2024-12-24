@@ -21,77 +21,7 @@
             color: #333;
         }
 
-        /* General Styles for the Navbar */
-.navbar {
-    background-color: #333; /* Dark background color */
-    position: fixed; /* Keeps the navbar fixed at the top */
-    top: 0;
-    width: 100%; /* Full width of the screen */
-    z-index: 1000; /* Ensures it stays on top */
-    padding: 10px 20px; /* Padding for spacing */
-}
-
-.navbar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Navbar Logo */
-.navbar .logo {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-/* Hamburger Icon (Initially shown on small screens) */
-.navbar-toggle {
-    font-size: 30px;
-    color: white;
-    display: none; /* Hidden by default */
-    cursor: pointer;
-}
-
-/* Navbar Links */
-.navbar-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    font-size: 18px;
-}
-
-.navbar-links a:hover {
-    background-color: #575757; /* Darken the background on hover */
-}
-
-/* Mobile View - Hide navbar links and show hamburger icon */
-@media screen and (max-width: 768px) {
-    .navbar-links {
-        display: none; /* Hide the links by default */
-        width: 100%; /* Full width of the screen */
-        flex-direction: column; /* Stack links vertically */
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Position links below the navbar */
-        left: 0;
-        padding: 20px;
-    }
-
-    .navbar-links a {
-        text-align: left;
-        padding: 10px 20px;
-        width: 100%; /* Make links take full width */
-    }
-
-    .navbar-toggle {
-        display: block; /* Show hamburger icon on small screens */
-    }/* Navbar Styles */
+        /* Navbar Styles */
         .navbar {
             background-color: #333;
             overflow: hidden;
@@ -483,19 +413,15 @@
 </head>
 
 <body ng-app="myApp" ng-controller="MainController">
+    <!-- Top Navigation Menu -->
     <div class="navbar">
-        <div class="navbar-header">
-            <span class="navbar-toggle" onclick="toggleMenu()">&#9776;</span>
-            <a href="#" class="logo"><img src="logo.png" alt="Logo"/></a>
-        </div>
-        <div class="navbar-links" id="navbarLinks">
-            <a href="#rectangularKada">Rectangular Kada</a>
-            <a href="#castingJimikki">Cute Jimmikies</a>
-            <a href="#priceCalculator">Price Calculator</a>
-        </div>
+        <a href="#rectangularKada">Rectangular Kada</a>
+        <a href="#castingJimikki">Cute Jimmikies</a>
+        <a href="#priceCalculator">Price Calculator</a>
     </div>
 
     <div class="container" ng-init="fetchData()">
+        <img src="logo.png" alt="Logo"/>
         <!-- Rectangular Kada Section -->
         <div id="rectangularKada" class="rectangular-kada">
             <h2>Rectangular Kada will be restocked tomorrow</h2>
@@ -597,12 +523,10 @@
                 $http.get('jimmikis.json').then(function (response) {
                     $scope.jimmikies = response.data;
                 });
-                $scope.isMenuOpen = false;
-
-                // Function to toggle the menu visibility
-                $scope.toggleMenu = function() {
-                    $scope.isMenuOpen = !$scope.isMenuOpen;
-                };
+            //     $scope.jimmikis = [
+            //     { name: 'Gold Necklace', weight: 10,wastage: 5 ,mc : 200,image: "jimiki/CS0721.jpg"}
+               
+            // ];
             };
 
             // Function to handle zoom for touch devices
