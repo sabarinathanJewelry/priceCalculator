@@ -4,32 +4,32 @@
         "name": "CSA0263",
         "description": "Cute casting jimiki",
         "weight":4.230,
-        "wastage": 18,
-        "mc" : 200,
+        "wastage": 13,
+        "mc" : 55,
         "image": "jimiki/CSA0263.jpg"
     },
     {
         "name": "CAS0339",
         "description": "Cute casting jimiki",
         "weight":3.620,
-        "wastage": 18,
-        "mc" : 200,
-        "image": "jimiki/CSA03391.jpg"
+        "wastage": 13,
+        "mc" : 55,
+        "image": "jimiki/CAS0339.jpg"
     },
     {
         "name": "CAS0346",
         "description": "Cute casting jimiki",
         "weight":4.330,
-        "wastage": 18,
-        "mc" : 200,
+        "wastage": 13,
+        "mc" : 55,
         "image": "jimiki/CAS0346.jpg"
     }, 
     {
         "name": "CS0721",
         "description": "Jimikki with 3 color stones stud, undetachable cute jimmiki",
         "weight":3.230,
-        "wastage": 16,
-        "mc" : 200,
+        "wastage": 12,
+        "mc" : 55,
         "image": "jimiki/CS0721.jpg"
     }
 ]
