@@ -61,7 +61,7 @@
         }
 
         /* Rectangular Kada Section */
-        .rectangular-kada {
+        .rectangular-kada,.casting-jimmiki {
             background-color: #f9f9f9;
             padding: 20px;
             border-radius: 10px;
@@ -69,7 +69,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .rectangular-kada h2 {
+        .rectangular-kada h2,.casting-jimmiki h2 {
             text-align: center;
             color: #333;
         }
@@ -325,10 +325,10 @@
             <div class="product-list">
                 <div class="jimmiki" ng-repeat="jimi in jimmikies">
                     <img ng-src="{{jimi.image}}" alt="{{jimi.name}}" class="zoomable-image">
-                    <h2>{{jimi.name}}</h2>
+                    <h2>{{jimi.name}} - {{jimi.weight}}</h2>
                     <p class="description">{{jimi.description}}</p>
                     <p class="gprice">Gold price : ₹{{jimi.weight*rate | number:0}}</p>
-                    <p class="wastage">wastage ({{jimi.wastage}}%): ₹{{(jimi.wastage*rate*jimi.weight)/100 | number:0}}</p>
+                    <p class="wastage">Wastage ({{jimi.wastage}}%): ₹{{(jimi.wastage*rate*jimi.weight)/100 | number:0}}</p>
                     <p class="mc">MC/HC : ₹{{jimi.mc}}</p>
                     <p class="bTax">Before Tax: {{bpTax=(((((rate*jimi.wastage)/100)+rate))*jimi.weight)+jimi.mc | number:0}}</p>
                     <p class="aTax">Final Price: {{((bpTax*3)/100)+bpTax | number:0}}</p>
