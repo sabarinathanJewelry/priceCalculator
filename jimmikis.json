@@ -1,15 +1,8 @@
 [
-    {
-        "name": "CS0721",
-        "description": "Jimikki with 3 color stones stud, undetachable cute jimmiki",
-        "weight":3.230,
-        "wastage": 16,
-        "mc" : 200,
-        "image": "jimiki/CS0721.jpg"
-    },
+   
     {
         "name": "CSA0263",
-        "description": "Jimikki with 13 color stones, undetachable cute jimmiki",
+        "description": "Cute casting jimiki",
         "weight":4.230,
         "wastage": 18,
         "mc" : 200,
@@ -17,7 +10,7 @@
     },
     {
         "name": "CAS0339",
-        "description": "Jimikki with 16 color stones, undetachable cute jimmiki",
+        "description": "Cute casting jimiki",
         "weight":3.620,
         "wastage": 18,
         "mc" : 200,
@@ -25,10 +18,18 @@
     },
     {
         "name": "CAS0346",
-        "description": "Jimikki with 14 color stones, undetachable cute jimmiki",
+        "description": "Cute casting jimiki",
         "weight":4.330,
         "wastage": 18,
         "mc" : 200,
         "image": "jimiki/CAS0346.jpg"
-    },
+    }, 
+    {
+        "name": "CS0721",
+        "description": "Jimikki with 3 color stones stud, undetachable cute jimmiki",
+        "weight":3.230,
+        "wastage": 16,
+        "mc" : 200,
+        "image": "jimiki/CS0721.jpg"
+    }
 ]
