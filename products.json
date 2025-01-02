@@ -1,9 +1,107 @@
 [
     {
-        "name": "Rose Diamond",
+        "name": "92K0093",
         "description": "Rose gold pattern with diamond.",
-        "price": 5700,
-        "reducedPrice": 5300,
-        "image": "images/80.jpg"
+        "price": 5960,
+        "reducedPrice": 5560,
+        "image": "images/92K0093.jpg"
+    },
+    {
+        "name": "92K0094",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6160,
+        "reducedPrice": 5760,
+        "image": "images/92K0094.jpg"
+    },
+    {
+        "name": "92K0095",
+        "description": "Rose gold pattern with diamond.",
+        "price": 5980,
+        "reducedPrice": 5580,
+        "image": "images/92K0095.jpg"
+    },
+    {
+        "name": "92K0096",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6212,
+        "reducedPrice": 5812,
+        "image": "images/92K0096.jpg"
+    },
+    {
+        "name": "92K0097",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6140,
+        "reducedPrice": 5740,
+        "image": "images/92K0097.jpg"
+    },
+    {
+        "name": "92K0098",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6120,
+        "reducedPrice": 5720,
+        "image": "images/92K0098.jpg"
+    },
+    {
+        "name": "92K0099",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6680,
+        "reducedPrice": 6280,
+        "image": "images/92K0099.jpg"
+    },
+    {
+        "name": "92K0100",
+        "description": "Rose gold pattern with diamond.",
+        "price": 7240,
+        "reducedPrice": 6840,
+        "image": "images/92K0100.jpg"
+    },
+    {
+        "name": "92K0101",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6640,
+        "reducedPrice": 6240,
+        "image": "images/92K0101.jpg"
+    },
+    {
+        "name": "92K0102",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6620,
+        "reducedPrice": 6220,
+        "image": "images/92K0102.jpg"
+    },
+    {
+        "name": "92K0103",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6500,
+        "reducedPrice": 6100,
+        "image": "images/92K0103.jpg"
+    },
+    {
+        "name": "92K0104",
+        "description": "Rose gold pattern with diamond.",
+        "price": 7080,
+        "reducedPrice": 6680,
+        "image": "images/92K0104.jpg"
+    },
+    {
+        "name": "92K0112",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6820,
+        "reducedPrice": 6420,
+        "image": "images/92K0112.jpg"
+    },
+    {
+        "name": "92K0113",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6620,
+        "reducedPrice": 6220,
+        "image": "images/92K0113.jpg"
+    },
+    {
+        "name": "92K0117",
+        "description": "Rose gold pattern with diamond.",
+        "price": 6460,
+        "reducedPrice": 6060,
+        "image": "images/92K0117.jpg"
     }
 ]
