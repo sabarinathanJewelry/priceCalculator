@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "priceCalculator",
+			"path": "."
+		},
+		{
+			"name": "jimiki",
+			"path": "../../../Downloads/pricecal/jimiki"
+		}
+	],
+	"settings": {}
+}

@@ -489,7 +489,7 @@
     <div class="container" ng-init="fetchData()">
         <img src="logo.png" alt="Logo"/>
         <!-- Rectangular Kada Section -->
-        <div id="rectangularKada" class="rectangular-kada">
+        <!-- <div id="rectangularKada" class="rectangular-kada">
             <h2>Rectangular Kada New Stock</h2>
             <div class="product-list">
                 <div class="product" ng-repeat="product in products">
@@ -501,7 +501,7 @@
                 </div>
             </div>
         </div>
-         <!-- Jimiki Section -->
+        
          <div id="castingJimikki" class="casting-jimmiki">
             <h2>Available Cute Jimmikies</h2>
             <div class="product-list">
@@ -516,7 +516,7 @@
                     <p class="aTax">Final Price: {{((bpTax*3)/100)+bpTax | number:0}}</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Price Calculator Section -->
         <div id="priceCalculator" class="price-calculator">
@@ -589,6 +589,11 @@
                 // Fetch product data
                 $http.get('products.json').then(function (response) {
                     $scope.products = response.data;
+                });
+                
+                // Fetch product data
+                 $http.get('DigiData.json').then(function (response) {
+                    $scope.digiData = response.data;
                 });
                 
                 // Fetch jimiki data
